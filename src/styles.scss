@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  position: relative;
+}
+
+section {
+  display: block;
+}
+.cinema__header {
+  background: linear-gradient(
+    #7051d6 0%,
+    #6543d5 31%,
+    #5027db 70.4%,
+    #540fed 100%
+  );
+}
+
+.cinema__carousel {
+  height: 520px;
+  .carousel-inner {
+    img {
+      width: 100%;
+      height: 520px;
+    }
+  }
+}
+
+.cinema__ticketform {
+  position: relative;
+  //   z-index: 99;
+  top: -50px;
+  margin: 0 auto;
+  width: 750px;
+  height: 100px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  .btn__container {
+  }
+}
+
+.cinema__movie {
+  min-height: 400px;
+  background: whitesmoke;
+  // width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .movie__container {
+    width: 100%;
+    .tab-content {
+      padding: 0 210px;
+      .tab-pane {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+        .movie__item {
+          height: 260px;
+          width: 100%;
+          background: red;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}

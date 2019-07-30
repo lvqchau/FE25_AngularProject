@@ -1,14 +1,194 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
+    <head>
   <meta charset="utf-8">
   <title>AngularProjectHTML</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- BEGIN HEADER -->
+    <nav class="cinema__header navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <a class="navbar-brand right" href="#">Logo</a>            
+      </div>
+      <div class="mx-auto">
+          <ul class="navbar-nav center">
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Lịch chiếu</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Cụm rạp</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Tin tức</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Ứng dụng</a>
+              </li>
+          </ul>
+      </div>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Đăng nhập</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="#">HCM</a>
+              </li>
+          </ul>
+      </div>
+    </nav>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CAROUSEL -->
+    <section id="demo" class="cinema__carousel carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/slide_1.jpg" alt="Los Angeles">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/slide_2.jpg" alt="Chicago">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/slide_3.jpg" alt="New York">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </section>
+    <!-- END CAROUSEL -->
+
+    <!-- BEGIN TICKETFORM -->
+    <section class="cinema__ticketform">
+    <div class="btn__container">
+        <div class="btn-group ">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              Sony
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Tablet</a>
+              <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Sony
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Tablet</a>
+            <a class="dropdown-item" href="#">Smartphone</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Sony
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Tablet</a>
+            <a class="dropdown-item" href="#">Smartphone</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Sony
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Tablet</a>
+            <a class="dropdown-item" href="#">Smartphone</a>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary">
+          Sony
+        </button>
+      </div>
+    </section>
+    <!-- END TICKETFORM --> 
+
+    <!-- BEGIN MOVIE -->
+    <section class="cinema__movie">
+      <div class="movie__container">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill" href="#now">Đang chiếu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#future">Sắp chiếu</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane container active" id="now">
+          <div class="movie__item">hello1</div>
+          <div class="movie__item">hello2</div>
+          <div class="movie__item">hello3</div>
+          <div class="movie__item">hello4</div>
+          <div class="movie__item">hello5</div>
+          <div class="movie__item">hello6</div>
+          <div class="movie__item">hello7</div>
+          <div class="movie__item">hello8</div>
+        </div>
+        <div class="tab-pane container fade" id="future">
+          <div class="movie__item">hello1</div>
+          <div class="movie__item">hello2</div>
+          <div class="movie__item">hello3</div>
+          <div class="movie__item">hello4</div>
+          <div class="movie__item">hello5</div>
+          <div class="movie__item">hello6</div>
+          <div class="movie__item">hello7</div>
+          <div class="movie__item">hello8</div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- END MOVIE -->
+
+    <!-- BEGIN AD -->
+    <!-- END AD -->
+
+    <!-- BEGIN CINEMAFORM -->
+    <!-- END CINEMAFORM -->
+
+    <!-- BEGIN AD2 -->
+    <!-- END AD2 -->
+
+    <!-- BEGIN NEWS -->
+    <!-- END NEWS -->
+
+    <!-- BEGIN EMAIL -->
+    <!-- END EMAIL -->
+
+    <!-- BEGIN APP -->
+    <!-- END APP -->
+
+    <!-- BEGIN FOOTER -->
+    <!-- END FOOTER -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
