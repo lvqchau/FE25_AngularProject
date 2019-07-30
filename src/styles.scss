@@ -1,20 +1,103 @@
+//button, header
+$purple-gradient: linear-gradient(
+  to right,
+  #7051d6 0%,
+  #6543d5 31%,
+  #5027db 70.4%,
+  #540fed 100%
+);
+//logo, navigation dot, navigation arrow, arrow-down:
+$yellow-primary: #ffd445;
+//navs, footer:
+$purple-primary: #5943ff;
+//social media icon background:
+$purple-light: #7362f4;
+//divider:
+$gray-light: #d5d5d5;
+//white:
+$white: #fff;
+//black:
+$black: #000;
+
 /* You can add global styles to this file, and also import other style files */
-body {
-  position: relative;
+@font-face {
+  font-family: "Grotesque";
+  src: url(assets/font/DarkerGrotesque-Bold.ttf) format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Grotesque";
+  src: url(assets/font/DarkerGrotesque-SemiBold.ttf) format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Grotesque";
+  src: url(assets/font/DarkerGrotesque-Medium.ttf) format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Grotesque";
+  src: url(assets/font/DarkerGrotesque-Regular.ttf) format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Grotesque";
+  src: url(assets/font/DarkerGrotesque-Light.ttf) format("opentype");
+  font-weight: 300;
 }
 
-section {
-  display: block;
+* {
+  font-family: "Grotesque";
+  font-weight: 500;
+  font-size: 16px;
 }
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background: $gray-light;
+}
+
+// Header
 .cinema__header {
-  background: linear-gradient(
-    #7051d6 0%,
-    #6543d5 31%,
-    #5027db 70.4%,
-    #540fed 100%
-  );
+  overflow: visible !important;
+  background: $purple-gradient;
+  padding: 10px 30px;
+
+  .center__navbar {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .right__navbar {
+    a {
+      font-size: 9px;
+    }
+    .custom-select {
+      appearance: none;
+      background: url("./assets/img/arrow-down.svg") 96% / 15% no-repeat;
+      width: unset;
+      color: white;
+      border: none;
+      box-shadow: none;
+      position: relative;
+    }
+  }
+  .nav-item {
+    &:hover a {
+      color: $yellow-primary;
+    }
+    a {
+      color: $white;
+      font-size: 20px;
+    }
+  }
 }
 
+// Carousel
 .cinema__carousel {
   height: 520px;
   .carousel-inner {
@@ -25,13 +108,13 @@ section {
   }
 }
 
+// Ticker Form
 .cinema__ticketform {
   position: relative;
-  //   z-index: 99;
-  top: -50px;
+  top: -30px;
   margin: 0 auto;
   width: 750px;
-  height: 100px;
+  height: 80px;
   background: red;
   display: flex;
   justify-content: center;
@@ -41,28 +124,180 @@ section {
   }
 }
 
+// Movie Gallery
 .cinema__movie {
-  min-height: 400px;
   background: whitesmoke;
-  // width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   .movie__container {
-    width: 100%;
+    .nav {
+      justify-content: center;
+    }
     .tab-content {
-      padding: 0 210px;
-      .tab-pane {
+      display: flex;
+      justify-content: center;
+      .tab__grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 30px;
         .movie__item {
           height: 260px;
-          width: 100%;
+          width: 180px;
           background: red;
           border-radius: 12px;
         }
       }
     }
   }
+}
+
+// Cinema Form
+.cinema__cinemaform {
+  min-height: 400px;
+  //   background: blue;
+  display: flex;
+  justify-content: center;
+  .cinemaform__container {
+    width: 810px;
+    background: #fff;
+    border-radius: 12px;
+    border: 2px solid black;
+    .nav__main {
+      justify-content: center;
+    }
+    .tab-content {
+      & > .active {
+        display: flex;
+        flex-direction: row;
+      }
+      .tab-pane {
+        .nav {
+          display: inline-flex;
+          flex-direction: column;
+        }
+        .tab-content {
+        }
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  height: 200px;
+  background: #000;
+}
+
+// font.css
+@font-face {
+  font-family: "Linearicons-Free";
+  src: url("assets/font/Linearicons-Free.eot?du8817");
+  src: url("assets/font/Linearicons-Free.eot?du8817#iefix")
+      format("embedded-opentype"),
+    url("assets/font/Linearicons-Free.ttf?du8817") format("truetype"),
+    url("assets/font/Linearicons-Free.woff?du8817") format("woff"),
+    url("assets/font/Linearicons-Free.svg?du8817#Linearicons-Free")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lnr {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "Linearicons-Free" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lnr-comment:before {
+  content: "\e900";
+}
+.lnr-indicator:before {
+  content: "\e901";
+  color: #fff;
+}
+.lnr-logo:before {
+  content: "\e902";
+  color: #ffd445;
+}
+.lnr-user1:before {
+  content: "\e903";
+  color: #fff;
+}
+.lnr-message-square:before {
+  content: "\e904";
+}
+.lnr-thumbs-up1:before {
+  content: "\e905";
+}
+.lnr-twitter:before {
+  content: "\f099";
+}
+.lnr-facebook:before {
+  content: "\f09a";
+}
+.lnr-facebook-f:before {
+  content: "\f09a";
+}
+.lnr-google-plus:before {
+  content: "\f0d5";
+}
+.lnr-envelope:before {
+  content: "\f0e0";
+}
+.lnr-angle-left:before {
+  content: "\f104";
+}
+.lnr-angle-right:before {
+  content: "\f105";
+}
+.lnr-angle-up:before {
+  content: "\f106";
+}
+.lnr-angle-down:before {
+  content: "\f107";
+}
+.lnr-instagram:before {
+  content: "\f16d";
+}
+.lnr-envelope1:before {
+  content: "\e818";
+}
+.lnr-user:before {
+  content: "\e82a";
+}
+.lnr-map-marker:before {
+  content: "\e833";
+}
+.lnr-bubble:before {
+  content: "\e83f";
+}
+.lnr-thumbs-up:before {
+  content: "\e86d";
+}
+.lnr-menu:before {
+  content: "\e871";
+}
+.lnr-chevron-down:before {
+  content: "\e874";
+}
+.lnr-arrow-up:before {
+  content: "\e877";
+}
+.lnr-arrow-left:before {
+  content: "\e879";
+}
+.lnr-arrow-right:before {
+  content: "\e87a";
+}
+.lnr-chevron-left-circle:before {
+  content: "\e889";
+}
+.lnr-chevron-right-circle:before {
+  content: "\e88a";
 }
