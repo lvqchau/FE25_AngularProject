@@ -10,6 +10,9 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+
+
   </head>
   <body>
     <!-- BEGIN HEADER -->
@@ -156,45 +159,93 @@
 
     <!-- BEGIN TICKETFORM -->
     <section class="cinema__ticketform">
-      <div class="btn__container">
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-              Sony
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Tablet</a>
-              <a class="dropdown-item" href="#">Smartphone</a>
-            </div>
-        </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            Sony
+      <div class="btn__container row d-flex justify-content-between align-items-center">
+        <div class="dropdown col-sm-3" id="movie__dropdown">
+          <button id="movie" class="dropdown-select btn d-flex align-items-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <p>Phim</p>
+            <span class="lnr lnr-angle-down ml-auto"></span>
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Tablet</a>
-            <a class="dropdown-item" href="#">Smartphone</a>
-          </div>
+          <ul class="dropdown-menu" aria-labelledby="movie">
+            <li><a>Đây là phim thứ nhất trong các phim đang được trình chiếu, các bạn nhớ đón xem</a></li>
+            <li><a>Đây là phim thứ hai</a></li>
+            <li><a>Phim thứ ba sắp được công chiếu vào ngày 2/7</a></li>
+            <li><a>Phim thứ tư</a></li>
+            <li><a>Phim thứ năm đang được chiếu tại các rạp</a></li>
+            <li><a>Phim thứ sáu đang đứng top 1</a></li>
+            <li><a>Đây là phim thứ nhất trong các phim đang được trình chiếu, các bạn nhớ đón xem</a></li>
+            <li><a>Đây là phim thứ hai</a></li>
+            <li><a>Phim thứ ba sắp được công chiếu vào ngày 2/7</a></li>
+            <li><a>Phim thứ tư</a></li>
+            <li><a>Phim thứ năm đang được chiếu tại các rạp</a></li>
+            <li><a>Phim thứ sáu đang đứng top 1</a></li>
+            <li><a>Đây là phim thứ nhất trong các phim đang được trình chiếu, các bạn nhớ đón xem</a></li>
+            <li><a>Đây là phim thứ hai</a></li>
+            <li><a>Phim thứ ba sắp được công chiếu vào ngày 2/7</a></li>
+            <li><a>Phim thứ tư</a></li>
+            <li><a>Phim thứ năm đang được chiếu tại các rạp</a></li>
+            <li><a>Phim thứ sáu đang đứng top 1</a></li>
+          </ul>
         </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            Sony
+        <div class="divider"></div>
+        <div class="dropdown col-sm-2" id="cinema__dropdown">
+          <button id="movie" class="dropdown-select btn d-flex align-items-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <p>Cụm rạp</p>
+            <span class="lnr lnr-angle-down ml-auto"></span>
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Tablet</a>
-            <a class="dropdown-item" href="#">Smartphone</a>
-          </div>
+          <ul class="dropdown-menu" aria-labelledby="cinema">
+            <li><a>BHD Star Bitexco</a></li>
+            <li><a>Cinestar Quốc Thanh</a></li>
+            <li><a>Lotte Cinema Nowzone</a></li>
+            <li><a>Mega GS Cao Thắng</a></li>
+            <li><a>CGV Diamond</a></li>
+            <li><a>Cinestar Hai Bà Trưng</a></li>
+            <li><a>BHD Star Bitexco</a></li>
+            <li><a>Cinestar Quốc Thanh</a></li>
+            <li><a>Lotte Cinema Nowzone</a></li>
+            <li><a>Mega GS Cao Thắng</a></li>
+            <li><a>CGV Diamond</a></li>
+            <li><a>Cinestar Hai Bà Trưng</a></li>
+          </ul>
         </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            Sony
+        <div class="divider"></div>
+        <div class="dropdown col-sm-2" id="date__dropdown">
+          <button id="movie" class="dropdown-select btn d-flex align-items-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <p>Ngày xem</p>
+            <span class="lnr lnr-angle-down ml-auto"></span>
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Tablet</a>
-            <a class="dropdown-item" href="#">Smartphone</a>
-          </div>
+          <ul class="dropdown-menu" aria-labelledby="date">
+            <p class="dropdown-header">Hôm nay</p>
+            <li><a>22-7-2019</a></li>
+            <p class="dropdown-header">Ngày mai</p>
+            <li><a>28-7-2019</a></li>
+            <p class="dropdown-header">Thứ năm</p>
+            <li><a>29-7-2019</a></li>
+            <p class="dropdown-header">Thứ sáu</p>
+            <li><a>30-7-2019</a></li>
+            <p class="dropdown-header">Thứ bảy</p>
+            <li><a>1-7-2019</a></li>
+            <p class="dropdown-header">Chủ nhật</p>
+            <li><a>2-7-2019</a></li>
+          </ul>
         </div>
-        <button type="button" class="btn btn-primary">
-          Sony
+        <div class="divider"></div>
+        <div class="dropdown col-sm-2" id="time__dropdown">
+          <button id="movie" class="dropdown-select btn d-flex align-items-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <p>Xuất chiếu</p>
+            <span class="lnr lnr-angle-down ml-auto"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="time">
+            <li><a>08:30</a></li>
+            <li><a>09:30</a></li>
+            <li><a>11:30</a></li>
+            <li><a>12:30</a></li>
+            <li><a>13:30</a></li>
+            <li><a>14:30</a></li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+        <button type="col-sm-2" class="btn cinema__btn">
+          ĐẶT VÉ
         </button>
       </div>
     </section>
@@ -459,14 +510,26 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+    <!--npm install mdbootstrap-->
     <script>
-    console.log("#dropdown-country");
-    console.log($(this).text());
-      $('.dropdown-menu li').on('click', function() {
+      $('#movie__dropdown .dropdown-menu li').on('click', function() {
         var getValue = $(this).text();
-        $('.dropdown-select').text(getValue);
+        $('#movie__dropdown .dropdown-select p').text(getValue);
       });
+      $('#cinema__dropdown .dropdown-menu li').on('click', function() {
+        var getValue = $(this).text();
+        $('#cinema__dropdown .dropdown-select p').text(getValue);
+      });
+      $('#date__dropdown .dropdown-menu li').on('click', function() {
+        var getValue = $(this).text();
+        $('#date__dropdown .dropdown-select p').text(getValue);
+      });
+      $('#time__dropdown .dropdown-menu li').on('click', function() {
+        var getValue = $(this).text();
+        $('#time__dropdown .dropdown-select p').text(getValue);
+      });
+     
     </script>
   </body>
 </html>
