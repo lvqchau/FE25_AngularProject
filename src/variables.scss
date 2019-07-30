@@ -1,0 +1,46 @@
+//button, header
+$purple-gradient: linear-gradient(
+  to right,
+  #7051d6 0%,
+  #6543d5 31%,
+  #5027db 70.4%,
+  #540fed 100%
+);
+//logo, navigation dot, navigation arrow, arrow-down:
+$yellow-primary: #ffd445;
+//navs, footer:
+$purple-primary: #5943ff;
+//social media icon background:
+$purple-light: #7362f4;
+//divider:
+$gray-light: #d5d5d5;
+//white:
+$white: #fff;
+//black:
+$black: #000;
+
+@font-face {
+  font-family: "Grotesque";
+  src: url(../assets/font/DarkerGrotesque-Bold.ttf) format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Grotesque";
+  src: url(../assets/font/DarkerGrotesque-SemiBold.ttf) format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Grotesque";
+  src: url(../assets/font/DarkerGrotesque-Medium.ttf) format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Grotesque";
+  src: url(../assets/font/DarkerGrotesque-Regular.ttf) format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Grotesque";
+  src: url(../assets/font/DarkerGrotesque-Light.ttf) format("opentype");
+  font-weight: 300;
+}
