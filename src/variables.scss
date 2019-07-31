@@ -44,16 +44,14 @@ $black: #000;
   src: url("assets/font/DarkerGrotesque-Light.ttf") format("opentype");
   font-weight: 300;
 }
-
-// font.css
 @font-face {
   font-family: "Linearicons-Free";
-  src: url("assets/font/Linearicons-Free.eot?du8817");
-  src: url("assets/font/Linearicons-Free.eot?du8817#iefix")
+  src: url("assets/font/Linearicons-Free.eot?g78a5s");
+  src: url("assets/font/Linearicons-Free.eot?g78a5s#iefix")
       format("embedded-opentype"),
-    url("assets/font/Linearicons-Free.ttf?du8817") format("truetype"),
-    url("assets/font/Linearicons-Free.woff?du8817") format("woff"),
-    url("assets/font/Linearicons-Free.svg?du8817#Linearicons-Free")
+    url("assets/font/Linearicons-Free.ttf?g78a5s") format("truetype"),
+    url("assets/font/Linearicons-Free.woff?g78a5s") format("woff"),
+    url("assets/font/Linearicons-Free.svg?g78a5s#Linearicons-Free")
       format("svg");
   font-weight: normal;
   font-style: normal;
@@ -62,6 +60,7 @@ $black: #000;
 .lnr {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "Linearicons-Free" !important;
+  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -73,6 +72,26 @@ $black: #000;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.lnr-happy:before {
+  content: "\e906";
+}
+.lnr-plus:before {
+  content: "\e907";
+}
+.lnr-playbtn .path1:before {
+  content: "\e908";
+  color: rgba(0, 0, 0, 0.35);
+}
+.lnr-playbtn .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: none;
+}
+.lnr-playbtn .path3:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
 .lnr-comment:before {
   content: "\e900";
 }
@@ -93,36 +112,6 @@ $black: #000;
 }
 .lnr-thumbs-up1:before {
   content: "\e905";
-}
-.lnr-twitter:before {
-  content: "\f099";
-}
-.lnr-facebook:before {
-  content: "\f09a";
-}
-.lnr-facebook-f:before {
-  content: "\f09a";
-}
-.lnr-google-plus:before {
-  content: "\f0d5";
-}
-.lnr-envelope:before {
-  content: "\f0e0";
-}
-.lnr-angle-left:before {
-  content: "\f104";
-}
-.lnr-angle-right:before {
-  content: "\f105";
-}
-.lnr-angle-up:before {
-  content: "\f106";
-}
-.lnr-angle-down:before {
-  content: "\f107";
-}
-.lnr-instagram:before {
-  content: "\f16d";
 }
 .lnr-envelope1:before {
   content: "\e818";
@@ -159,4 +148,43 @@ $black: #000;
 }
 .lnr-chevron-right-circle:before {
   content: "\e88a";
+}
+.lnr-twitter:before {
+  content: "\f099";
+}
+.lnr-facebook:before {
+  content: "\f09a";
+}
+.lnr-facebook-f:before {
+  content: "\f09a";
+}
+.lnr-google-plus:before {
+  content: "\f0d5";
+}
+.lnr-envelope:before {
+  content: "\f0e0";
+}
+.lnr-angle-left:before {
+  content: "\f104";
+}
+.lnr-angle-right:before {
+  content: "\f105";
+}
+.lnr-angle-up:before {
+  content: "\f106";
+}
+.lnr-angle-down:before {
+  content: "\f107";
+}
+.lnr-instagram:before {
+  content: "\f16d";
+}
+.lnr-play2:before {
+  content: "\ea15";
+}
+.lnr-play3:before {
+  content: "\ea1c";
+}
+.lnr-share2:before {
+  content: "\ea82";
 }
