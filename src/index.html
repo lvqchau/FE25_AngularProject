@@ -9,20 +9,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
-
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
   </head>
   <body>
-        <!-- BEGIN HEADER -->
+    <app-root></app-root>
+    <!-- BEGIN HEADER -->
     <header>
       <nav class="navbar cinema__header navbar-expand-md">
         <a href="/" class="navbar-brand ml-0">
           <span class="lnr lnr-logo" style="font-size: 50px;"></span>
         </a> 
         <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target=".dual-nav">
-            <span class="navbar-toggler-icon"></span>
+            <span class="lnr lnr-menu"></span>
         </button>
         <div class="navbar-collapse collapse dual-nav center__navbar">
             <ul class="navbar-nav justify-content-center">
@@ -424,49 +423,133 @@
     <!-- END AD -->
 
     <!-- BEGIN CINEMAFORM -->
-    <section class="cinema__cinemaform">
+    <section class="cinema__cinemaform d-flex justify-content-center align-items-center">
+      <h2> Cụm rạp </h2>
       <div class="cinemaform__container">
-        <ul class="nav nav-pills nav__main">
+        <ul class="nav nav__main d-flex align-items-center justify-content-center">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#brand1">Brand1</a>
+            <a class="nav-link active" data-toggle="pill" href="#brand1">
+              <img src="assets/img/cinema/cine1.png"/>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#brand2">Brand2</a>
+            <a class="nav-link" data-toggle="pill" href="#brand2">
+              <img src="assets/img/cinema/cine2.png"/>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#brand3">Brand3</a>
+            <a class="nav-link" data-toggle="pill" href="#brand3">
+              <img src="assets/img/cinema/cine3.png"/>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#brand4">Brand4</a>
+            <a class="nav-link" data-toggle="pill" href="#brand4">
+              <img src="assets/img/cinema/cine4.png"/>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#brand5">Brand5</a>
+            <a class="nav-link" data-toggle="pill" href="#brand5">
+              <img src="assets/img/cinema/cine5.png"/>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#brand6">Brand6</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#brand7">Brand7</a>
+            <a class="nav-link" data-toggle="pill" href="#brand6">
+              <img src="assets/img/cinema/cine6.png"/>
+            </a>
           </li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
           <div class="tab-pane active" id="brand1">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#cinema1_1">Cinema1_1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema1_2">Cinema1_2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema1_3">Cinema1_3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema1_4">Cinema1_4</a>
-              </li>
-            </ul>
+            <div class="nav__overflow">
+              <ul class="nav nav-pills d-flex">
+                <li class="nav-item">
+                  <a class="nav-link active d-flex p-0 py-1" data-toggle="pill" href="#cinema1_1">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/bhd-star-cineplex-quang-trung', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_3">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_4">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="tab-content">
               <div class="tab-pane container active" id="cinema1_1">Cinema1_1</div>
               <div class="tab-pane container fade" id="cinema1_2">Cinema1_2</div>
@@ -475,20 +558,94 @@
             </div>
           </div>
           <div class="tab-pane fade" id="brand2">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#cinema2_1">Cinema2_1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema2_2">Cinema2_2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema2_3">Cinema2_3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema2_4">Cinema2_4</a>
-              </li>
-            </ul>
+            <div class="nav__overflow">
+              <ul class="nav nav-pills d-flex">
+                <li class="nav-item">
+                  <a class="nav-link active d-flex p-0 py-1" data-toggle="pill" href="#cinema1_1">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/bhd-star-cineplex-quang-trung', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_3">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_4">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="tab-content">
               <div class="tab-pane container active" id="cinema2_1">Cinema2_1</div>
               <div class="tab-pane container fade" id="cinema2_2">Cinema2_2</div>
@@ -497,115 +654,390 @@
             </div>
           </div>
           <div class="tab-pane fade" id="brand3">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#cinema3_1">Cinema3_1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema3_2">Cinema3_2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema3_3">Cinema3_3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema3_4">Cinema3_4</a>
-              </li>
-            </ul>
+            <div class="nav__overflow">
+              <ul class="nav nav-pills d-flex">
+                <li class="nav-item">
+                  <a class="nav-link active d-flex p-0 py-1" data-toggle="pill" href="#cinema1_1">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/bhd-star-cineplex-quang-trung', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_3">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_4">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="tab-content">
               <div class="tab-pane container active" id="cinema3_1">Cinema3_1</div>
               <div class="tab-pane container fade" id="cinema3_2">Cinema3_2</div>
               <div class="tab-pane container fade" id="cinema3_3">Cinema3_3</div>
-              <div class="tab-pane container fade" id="cinema3_3">Cinema3_4</div>
+              <div class="tab-pane container fade" id="cinema3_4">Cinema3_4</div>
             </div>
           </div>
           <div class="tab-pane fade" id="brand4">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#cinema4_1">Cinema4_1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema4_2">Cinema4_2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema4_3">Cinema4_3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema4_4">Cinema4_4</a>
-              </li>
-            </ul>
+            <div class="nav__overflow">
+              <ul class="nav nav-pills d-flex">
+                <li class="nav-item">
+                  <a class="nav-link active d-flex p-0 py-1" data-toggle="pill" href="#cinema1_1">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/bhd-star-cineplex-quang-trung', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_3">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_4">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="tab-content">
               <div class="tab-pane container active" id="cinema4_1">Cinema4_1</div>
               <div class="tab-pane container fade" id="cinema4_2">Cinema4_2</div>
               <div class="tab-pane container fade" id="cinema4_3">Cinema4_3</div>
-              <div class="tab-pane container fade" id="cinema4_3">Cinema4_4</div>
+              <div class="tab-pane container fade" id="cinema4_4">Cinema4_4</div>
             </div>
           </div>
           <div class="tab-pane fade" id="brand5">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#cinema5_1">Cinema5_1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema5_2">Cinema5_2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema5_3">Cinema5_3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema5_4">Cinema5_4</a>
-              </li>
-            </ul>
+            <div class="nav__overflow">
+              <ul class="nav nav-pills d-flex">
+                <li class="nav-item">
+                  <a class="nav-link active d-flex p-0 py-1" data-toggle="pill" href="#cinema1_1">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/bhd-star-cineplex-quang-trung', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_3">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_4">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="tab-content">
               <div class="tab-pane container active" id="cinema5_1">Cinema5_1</div>
               <div class="tab-pane container fade" id="cinema5_2">Cinema5_2</div>
               <div class="tab-pane container fade" id="cinema5_3">Cinema5_3</div>
-              <div class="tab-pane container fade" id="cinema5_3">Cinema5_4</div>
+              <div class="tab-pane container fade" id="cinema5_4">Cinema5_4</div>
             </div>
           </div>
           <div class="tab-pane fade" id="brand6">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#cinema6_1">Cinema6_1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema6_2">Cinema6_2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema6_3">Cinema6_3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema6_4">Cinema6_4</a>
-              </li>
-            </ul>
+            <div class="nav__overflow">
+              <ul class="nav nav-pills d-flex">
+                <li class="nav-item">
+                  <a class="nav-link active d-flex p-0 py-1" data-toggle="pill" href="#cinema1_1">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/bhd-star-cineplex-quang-trung', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_2">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_3">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex p-0 py-1" data-toggle="pill" href="#cinema1_4">
+                    <div class="brand__branch mr-2">
+                      <img src="assets/img/cinema/bhd/bhd-star-vincom-quang-trung.jpg"/>
+                    </div>
+                    <div class="branch__info">
+                      <p class="branch__name">BHD Star Cineplex<span> - Vincom Quang Trung</span></p>
+                      <p class="branch__address">B1-Vincom QT, 190 Quang Trung, Gò Vấp</p>
+                      <p class="branch__more" onclick="window.open('/rap-chieu-phim/branch__name+mainadress', '_blank')">[Chi tiết]</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="tab-content">
               <div class="tab-pane container active" id="cinema6_1">Cinema6_1</div>
               <div class="tab-pane container fade" id="cinema6_2">Cinema6_2</div>
               <div class="tab-pane container fade" id="cinema6_3">Cinema6_3</div>
-              <div class="tab-pane container fade" id="cinema6_3">Cinema6_4</div>
+              <div class="tab-pane container fade" id="cinema6_4">Cinema6_4</div>
             </div>
           </div>
-          <div class="tab-pane fade" id="brand7">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#cinema7_1">Cinema7_1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema7_2">Cinema7_2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema7_3">Cinema7_3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#cinema7_4">Cinema7_4</a>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane container active" id="cinema7_1">Cinema7_1</div>
-              <div class="tab-pane container fade" id="cinema7_2">Cinema7_2</div>
-              <div class="tab-pane container fade" id="cinema7_3">Cinema7_3</div>
-              <div class="tab-pane container fade" id="cinema7_3">Cinema7_4</div>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
@@ -653,5 +1085,6 @@
         var getValue = $(this).text();
         $('#time__dropdown .dropdown-select p').text(getValue);
       });
+
     </script>
   </body>

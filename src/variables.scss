@@ -1,11 +1,20 @@
 //button, header
 $purple-gradient: linear-gradient(
-  to right,
-  #7051d6 0%,
-  #6543d5 31%,
-  #5027db 70.4%,
+  to left,
+  #7157c9 0%,
+  #6449bd 30%,
+  #5027db 70%,
   #540fed 100%
 );
+$purple-gradient-light: linear-gradient(
+  to left,
+  #8d77d4 0%,
+  #5027db 70%,
+  #540fed 100%
+);
+
+$purple-shadow: #aa98df;
+
 //logo, navigation dot, navigation arrow, arrow-down:
 $yellow-primary: #ffd445;
 //navs, footer:
