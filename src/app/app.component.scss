@@ -349,6 +349,93 @@
   }
 }
 
+// Cinema Ad
+.cinema__ad {
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 40px;
+  background-color: black;
+  color: white;
+  h1 {
+    font-weight: 600;
+    font-size: 60px;
+  }
+}
+
+.cinema__news {
+  .movie__container {
+    .nav {
+      justify-content: center;
+      margin: 40px 0;
+      a.active {
+        font-weight: 600;
+        color: $white;
+        text-transform: uppercase;
+        border: 1px solid $purple-primary;
+        width: 200px;
+        background-color: $purple-primary;
+      }
+      a {
+        color: $black;
+        transition: all 0.3s;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $purple-primary;
+        &:hover {
+          font-weight: 600;
+        }
+      }
+      .current__movie {
+        a {
+          border-radius: 10px 0 0 10px;
+        }
+      }
+      .upcoming__movie {
+        a {
+          border-radius: 0 10px 10px 0;
+        }
+      }
+    }
+  }
+  .grid__news {
+    @include grid($twocolumn);
+    .news__content {
+      @include newsStyle(300px);
+    }
+  }
+  .grid__news2 {
+    @include grid($threecolumn);
+    .news__content {
+      @include newsStyle(200px);
+    }
+    .more__news {
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      .news__items {
+        img {
+          height: 60px;
+          width: 60px;
+          display: flex;
+        }
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          display: inline;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+//Email
+
+//APP
+.app {
+  @include grid($twocolumn);
+}
+
 // Cinema Form
 .cinema__cinemaform {
   flex-direction: column;

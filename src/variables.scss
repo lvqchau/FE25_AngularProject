@@ -197,3 +197,34 @@ $black: #000;
 .lnr-share2:before {
   content: "\ea82";
 }
+
+//News column
+$twocolumn: 1fr 1fr;
+$threecolumn: 1fr 1fr 1fr;
+
+@mixin grid($numbersofcolumn) {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: $numbersofcolumn;
+  grid-gap: 15px;
+}
+
+@mixin newsStyle($news-image-height) {
+  h4 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .news__image {
+    img {
+      height: $news-image-height;
+      width: 100%;
+      border-radius: 7px;
+    }
+  }
+  .news__icon {
+    img {
+      height: 20px;
+      margin: 15px;
+    }
+  }
+}
