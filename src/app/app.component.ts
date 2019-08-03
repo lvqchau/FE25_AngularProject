@@ -1,15 +1,18 @@
-import { Component, Input } from "@angular/core";
-import $ from "jquery";
+import { Component, Input, ViewEncapsulation, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  styleUrls: ["./app.component.scss"],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   @Input() public movieChosen: string;
-
   title = "AngularProjectHTML";
+
+  ngAfterViewInit() {
+    document.getElementsByClassName("main__tabset")[0].getElementsByTagName("ul")[0].classList.add("main__nav");
+  }
 
   statusCinema: boolean = false;
   statusDate: boolean = false;
@@ -220,7 +223,7 @@ export class AppComponent {
                   movie_date: "07-08-2019",
                   movie_time: ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30"]
                 }
-              ] 
+              ]
             },
             {
               movie_id: 2,
@@ -698,17 +701,15 @@ export class AppComponent {
   ];
   timeList = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30"];
 
-
-
   constructor() {
     for (let i = 2; i < this.dateList.length; i++) {
       let curDate = new Date();
 
       //"Hôm nay": T7: 6
-      let curDay: number = new Date().getDay(); 
+      let curDay: number = new Date().getDay();
       //skip qua "Ngày mai" : CN: 0
       if (curDay + 1 === 7) curDay = 0;
-      else curDay = curDay + 1; 
+      else curDay = curDay + 1;
 
       switch (i) {
         case 2:
