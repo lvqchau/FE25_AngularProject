@@ -757,23 +757,44 @@ export class AppComponent {
     let year = d.getFullYear();
     month = d.getMonth() + 1;
     day = d.getDate();
-    if (day < 9) day = "0" + day;
-    if (month < 9) month = "0" + month;
+    if (day < 10) day = "0" + day;
+    if (month < 10) month = "0" + month;
     return [day, month, year].join("-");
+  }
+  getEleClass(value) {
+    return document.getElementById(value).getElementsByTagName("ul")[0].classList;
   }
 
   setSelected(value, check) {
+    let cinemaDrop = this.getEleClass("cinemas__dropdown");
+    let dateDrop = this.getEleClass("date__dropdown");
+    let timeDrop = this.getEleClass("time__dropdown");
+    let orderBtn = document.getElementById("ticket__btn").classList;
+    orderBtn.remove("order__ticket");
     if (check === 1) {
       this.selectedMovie = value;
+      this.selectedCinema = "Cụm rạp";
+      this.selectedDate = "Ngày xem";
+      this.selectedTime = "Xuất chiếu";
       this.statusCinema = true;
+      cinemaDrop.add("show");
     } else if (check === 2) {
+      cinemaDrop.remove("show");
       this.selectedCinema = value;
+      this.selectedDate = "Ngày xem";
+      this.selectedTime = "Xuất chiếu";
       this.statusDate = true;
+      dateDrop.add("show");
     } else if (check === 3) {
+      dateDrop.remove("show");
       this.selectedDate = this.formatDate(value);
+      this.selectedTime = "Xuất chiếu";
       this.statusTime = true;
+      timeDrop.add("show");
     } else if (check === 4) {
       this.selectedTime = value;
+      timeDrop.remove("show");
+      orderBtn.add("order__ticket");
     }
 
     // this.movieStatus = false;

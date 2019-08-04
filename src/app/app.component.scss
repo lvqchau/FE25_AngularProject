@@ -1,4 +1,5 @@
 @import "../variables.scss";
+
 header {
   width: 100%;
   position: relative;
@@ -23,7 +24,10 @@ header {
     font-size: 35px;
   }
   .dropdown-toggle::after {
-    display: none;
+    display: none !important;
+  }
+  .dropup .dropdown-toggle::after {
+    display: none !important;
   }
 }
 
@@ -44,7 +48,7 @@ header {
   &:hover {
     opacity: 0.9;
     border: none;
-    color: $white !important;
+    color: $white;
   }
 }
 
@@ -127,8 +131,22 @@ header {
     padding: 0 25px;
     .cinema__btn {
       margin: auto 0;
+      transition: all 0.3s;
+      &.order__ticket {
+        transition: all 0.7s;
+        background: rgb(255, 217, 0);
+        border-bottom-color: rgb(216, 165, 27);
+        color: $black;
+      }
     }
     .cinema__dropdown {
+      .dropdown-menu.show {
+        top: 0px;
+        left: 0px;
+        will-change: transform;
+        position: absolute;
+        transform: translate(0px, 27px);
+      }
       padding: 0 !important;
       .btn {
         width: 95%;
@@ -137,7 +155,6 @@ header {
         font-size: 16px;
         font-weight: 500;
         transform: none;
-
         .lnr {
           color: $yellow-primary;
         }
@@ -615,5 +632,4 @@ footer {
 
 .cine-container {
   width: 835px;
-  // background: url(../node_modules/@ng-bootstrap/ng-bootstrap/dropdown/dropdown.module.d.ts);
 }
