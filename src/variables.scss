@@ -14,11 +14,8 @@ $purple-gradient-light: linear-gradient(
 );
 
 $purple-shadow: #aa98df;
-
 //logo, navigation dot, navigation arrow, arrow-down:
 $yellow-primary: #ffd445;
-//navs, footer:
-$purple-primary: #5943ff;
 //social media icon background:
 $purple-light: #7362f4;
 //divider:
@@ -28,8 +25,20 @@ $gray-dark: #9d9d9d;
 $white: #fff;
 //black:
 $black: #000;
-$green: #1f9350;
 $orangered: orangered;
+$green: #1f9350;
+
+$purple-primary: #5943ff;
+$black-text: #000;
+$bg: #fff;
+$border: $gray-light;
+$main-bg: #14181d;
+
+$purple-primary-dark: #8605ff;
+$border-dark: #778899;
+$black-text-dark: #c4daf0;
+$bg-dark: transparent;
+$main-bg-dark: $white;
 
 @font-face {
   font-family: "Grotesque";
@@ -199,4 +208,35 @@ $orangered: orangered;
 }
 .lnr-share2:before {
   content: "\ea82";
+}
+
+//News column
+$twocolumn: 1fr 1fr;
+$threecolumn: 1fr 1fr 1fr;
+
+@mixin grid($numbersofcolumn) {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: $numbersofcolumn;
+  grid-gap: 15px;
+}
+
+@mixin newsStyle($news-image-height) {
+  h4 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .news__image {
+    img {
+      height: $news-image-height;
+      width: 100%;
+      border-radius: 7px;
+    }
+  }
+  .news__icon {
+    img {
+      height: 20px;
+      margin: 15px;
+    }
+  }
 }

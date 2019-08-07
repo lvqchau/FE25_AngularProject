@@ -3,13 +3,13 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatButtonModule } from "@angular/material/button";
-import { MatCheckboxModule } from "@angular/material/checkbox";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatSelectModule } from "@angular/material/select";
+import { SlickCarouselModule } from "ngx-slick-carousel";
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +23,8 @@ import { MatSelectModule } from "@angular/material/select";
     MatSidenavModule,
     MatMenuModule,
     MatTabsModule,
-    MatSelectModule
+    MatSelectModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

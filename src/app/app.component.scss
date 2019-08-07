@@ -55,6 +55,7 @@ header {
     color: $white;
   }
 }
+
 // Header
 .cinema__header {
   overflow: visible !important;
@@ -144,11 +145,7 @@ header {
     }
     .cinema__dropdown {
       .dropdown-menu.show {
-        top: 0px;
-        left: 0px;
-        will-change: transform;
-        position: absolute;
-        transform: translate(0px, 27px);
+        transform: translate(0px, 27px) !important;
       }
       padding: 0 !important;
       .btn {
@@ -226,6 +223,7 @@ header {
         justify-content: center;
         align-items: center;
         border: 1px solid $purple-primary;
+        background-color: $white;
         &:hover {
           font-weight: 600;
         }
@@ -253,129 +251,130 @@ header {
         @media screen and (min-width: 986px) {
           grid-gap: 25px;
         }
-        .movie__item {
-          position: relative;
-          @media screen and (min-width: 986px) {
-            min-height: 270px;
-            width: 190px;
-          }
+      }
+      .movie__item {
+        position: relative;
+        @media screen and (min-width: 986px) {
+          min-height: 220px;
+          width: 170px;
+        }
 
-          img {
-            border-radius: 12px;
+        img {
+          border-radius: 12px;
+          width: 100%;
+          height: 100%;
+        }
+        .movie__content {
+          margin-top: 10px;
+          position: relative;
+          .btn {
+            position: absolute;
+            transition: 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            top: 0;
+            left: 0;
+            margin: 0;
+            border: 0;
             width: 100%;
-            height: 100%;
+            font-size: 16px;
+            @media screen and (min-width: 986px) {
+              font-size: 18px;
+            }
+            @media screen and (min-width: 868px) {
+              font-size: 17px;
+            }
           }
-          .movie__content {
-            margin-top: 10px;
-            position: relative;
-            .btn {
-              position: absolute;
-              transition: 0.3s;
-              opacity: 0;
-              visibility: hidden;
-              top: 0;
-              left: 0;
-              margin: 0;
-              border: 0;
-              width: 100%;
+          h5,
+          p {
+            display: none;
+            color: $black-text;
+            @media screen and (min-width: 545px) {
+              display: block;
+              opacity: 1;
+              visibility: visible;
+            }
+            transition: 0.3s;
+          }
+          h5 {
+            font-size: 17px;
+            @media screen and (min-width: 986px) {
+              font-size: 18px;
+            }
+            line-height: 20px;
+            height: 40px;
+            font-weight: 600;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          p {
+            font-size: 14px;
+            @media screen and (min-width: 986px) {
               font-size: 16px;
-              @media screen and (min-width: 986px) {
-                font-size: 18px;
-              }
-              @media screen and (min-width: 868px) {
-                font-size: 17px;
+            }
+
+            margin: 0;
+          }
+        }
+        .movie__img {
+          width: 170px;
+          border-radius: 12px;
+          overflow: hidden;
+          height: 220px;
+          position: relative;
+          .overlay {
+            transition: 0.4s;
+            height: 150%;
+            width: 170%;
+            position: absolute;
+            top: 65%;
+            left: -140%;
+            transform: rotate(45deg);
+            background: $yellow-primary;
+            a {
+              color: $black;
+              .lnr {
+                font-size: 2vw;
+                @media screen and (min-width: 986px) {
+                  font-size: 18px;
+                }
+                transition: 0.3s;
+                position: absolute;
+                left: 48%;
+                top: 2%;
+                transform: rotate(75deg);
               }
             }
-            h5,
-            p {
+          }
+        }
+        &:hover {
+          .movie__content {
+            .btn {
               display: none;
               @media screen and (min-width: 545px) {
                 display: block;
                 opacity: 1;
                 visibility: visible;
               }
-              transition: 0.3s;
             }
-            h5 {
-              font-size: 17px;
-              @media screen and (min-width: 986px) {
-                font-size: 18px;
-              }
-              line-height: 20px;
-              height: 40px;
-              font-weight: 600;
-              width: 100%;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
+            h5,
             p {
-              font-size: 14px;
-              @media screen and (min-width: 986px) {
-                font-size: 16px;
-              }
-
-              margin: 0;
+              opacity: 0;
+              visibility: hidden;
             }
           }
           .movie__img {
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 100%;
-            position: relative;
             .overlay {
-              transition: 0.4s;
               height: 150%;
-              width: 170%;
-              position: absolute;
-              top: 65%;
-              left: -140%;
-              transform: rotate(45deg);
-              background: $yellow-primary;
-              a {
-                color: $black;
-                .lnr {
-                  font-size: 2vw;
-                  @media screen and (min-width: 986px) {
-                    font-size: 18px;
-                  }
-                  transition: 0.3s;
-                  position: absolute;
-                  left: 48%;
-                  top: 2%;
-                  transform: rotate(75deg);
-                }
-              }
-            }
-          }
-          &:hover {
-            .movie__content {
-              .btn {
-                display: none;
-                @media screen and (min-width: 545px) {
-                  display: block;
-                  opacity: 1;
-                  visibility: visible;
-                }
-              }
-              h5,
-              p {
-                opacity: 0;
-                visibility: hidden;
-              }
-            }
-            .movie__img {
-              .overlay {
-                height: 150%;
-                opacity: 0.9;
-                top: -25%;
-                left: -40%;
-                .lnr {
-                  left: 53%;
-                  top: 49%;
-                  transform: translate(-50%, -50%) rotate(75deg);
-                  font-size: 35px;
-                }
+              opacity: 0.9;
+              top: -25%;
+              left: -40%;
+              .lnr {
+                left: 53%;
+                top: 49%;
+                transform: translate(-50%, -50%) rotate(75deg);
+                font-size: 35px;
               }
             }
           }
@@ -383,6 +382,187 @@ header {
       }
     }
   }
+}
+
+.cinema__movie {
+  .slick-next,
+  .slick-prev {
+    background-color: $yellow-primary;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    &:before {
+      font-family: "Linearicons-Free";
+      color: black;
+      transition: all 0.4s;
+    }
+    &:hover {
+      background: $purple-gradient;
+      &::before {
+        color: white;
+      }
+    }
+  }
+  .slick-next {
+    right: -70px;
+    &:before {
+      content: "\e87a";
+      font-size: 30px;
+    }
+  }
+  .slick-prev {
+    left: -70px;
+    &:before {
+      content: "\e879";
+      font-size: 30px;
+    }
+  }
+
+  .carousel {
+    width: 760px;
+    margin: 0 auto;
+  }
+  .slide {
+    width: 170px !important;
+    margin: 10px 10px;
+    .btn {
+      display: none;
+    }
+    h5 {
+      font-size: 18px !important;
+      margin: 0;
+      color: $black-text;
+    }
+    p {
+      font-size: 16px !important;
+      color: $black-text;
+    }
+    &:hover {
+      .movie__content {
+        .btn {
+          display: none;
+          @media screen and (min-width: 545px) {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        h5,
+        p {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .movie__img {
+        .overlay {
+          height: 150%;
+          opacity: 0.9;
+          top: -25%;
+          left: -40%;
+          .lnr {
+            left: 53%;
+            top: 49%;
+            transform: translate(-50%, -50%) rotate(75deg);
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+  .movie__content {
+    margin-top: 10px;
+    position: relative;
+    text-align: left;
+    .btn {
+      position: absolute;
+      transition: 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      top: 0;
+      left: 0;
+      margin: 0;
+      border: 0;
+      width: 100%;
+      font-size: 16px;
+      @media screen and (min-width: 986px) {
+        font-size: 18px;
+      }
+      @media screen and (min-width: 868px) {
+        font-size: 17px;
+      }
+    }
+    h5,
+    p {
+      display: none;
+      @media screen and (min-width: 545px) {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+      transition: 0.3s;
+    }
+    h5 {
+      font-size: 17px;
+      @media screen and (min-width: 986px) {
+        font-size: 18px;
+      }
+      line-height: 20px;
+      height: 40px;
+      font-weight: 600;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      font-size: 14px;
+      @media screen and (min-width: 986px) {
+        font-size: 16px;
+      }
+
+      margin: 0;
+    }
+  }
+  .movie__img {
+    width: 170px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 220px;
+    position: relative;
+    img {
+      height: 220px;
+      width: 170px;
+    }
+    .overlay {
+      transition: 0.4s;
+      height: 150%;
+      width: 170%;
+      position: absolute;
+      top: 65%;
+      left: -140%;
+      transform: rotate(45deg);
+      background: $yellow-primary;
+      a {
+        color: $black;
+        .lnr {
+          font-size: 2vw;
+          @media screen and (min-width: 986px) {
+            font-size: 18px;
+          }
+          transition: 0.3s;
+          position: absolute;
+          left: 48%;
+          top: 2%;
+          transform: rotate(75deg);
+        }
+      }
+    }
+  }
+}
+
+// Cinema Ad
+.cinema__ad {
+  margin: 50px 180px;
 }
 
 // Cinema Form
@@ -394,7 +574,7 @@ header {
   h2 {
     font-weight: 600;
     display: inline;
-    margin: 40px 0;
+    margin-bottom: 40px;
     position: relative;
     &:after {
       content: "";
@@ -407,12 +587,12 @@ header {
     }
   }
   .cinemaform__container {
-    background: #fff;
+    background: $bg;
     border-radius: 12px;
-    border: 1px solid $gray-light;
+    border: 1px solid $border;
     .nav__main {
       padding: 15px 0;
-      border-bottom: 1px solid $gray-light;
+      border-bottom: 1px solid $border;
       .nav-link {
         margin: 0 15px;
         height: 65px;
@@ -454,6 +634,7 @@ header {
         display: flex;
         flex-direction: row;
       }
+
       .tab-pane {
         .nav__overflow {
           height: 500px;
@@ -461,13 +642,13 @@ header {
           .nav {
             padding: 10px;
             height: 100%;
-            border-right: 1px solid $gray-light;
+            border-right: 1px solid $border;
             flex-direction: column;
             .nav-link {
               width: 100%;
-              background: $white;
+              background: $bg;
               border-radius: 0;
-              border-bottom: 1px solid $gray-light;
+              border-bottom: 1px solid $border;
               opacity: 0.5;
               &.active,
               &:hover {
@@ -490,7 +671,7 @@ header {
                 span {
                   font-size: 11px;
                   margin: 0;
-                  color: black;
+                  color: $black-text;
                 }
                 .branch__name {
                   font-size: 13px;
@@ -509,7 +690,7 @@ header {
                   color: $orangered;
                   display: table;
                   &:hover {
-                    color: $purple-primary;
+                    color: $purple-light;
                   }
                 }
               }
@@ -527,7 +708,7 @@ header {
         overflow: hidden;
         overflow-y: scroll;
         .branch__container {
-          border-bottom: 1px solid $gray-light;
+          border-bottom: 1px solid $border;
         }
         .branch__movie {
           padding: 10px;
@@ -543,18 +724,19 @@ header {
             }
             .movieinfo__content {
               .movie__title {
+                color: $black-text;
                 .age__restrict {
                   padding: 0px 4px 2px;
                   border-radius: 3px;
                   font-size: 14px;
-                  color: $white;
+                  color: white;
                   background-color: $orangered;
                   margin-right: 5px;
                 }
               }
               .movie__ratings {
                 p {
-                  color: $gray-dark;
+                  color: gray;
                 }
               }
             }
@@ -566,6 +748,7 @@ header {
               height: 30px;
               margin-top: 10px;
               margin-left: 10px;
+              // filter: brightness(160%);
             }
             .movie__time {
               display: grid;
@@ -576,8 +759,10 @@ header {
                 font-size: 25px;
                 font-weight: 600;
                 color: $green;
+                // color: #12c25b;
                 &:hover {
                   color: $orangered;
+                  // color: rgb(255, 217, 0);
                 }
               }
             }
@@ -588,16 +773,27 @@ header {
   }
 }
 
+// Cinema News
+
+//Email
+
+//APP
+.app {
+  @include grid($twocolumn);
+}
+
 // Footer
 footer {
   background: #000;
   p {
     font-size: 16px;
+    color: $white;
   }
   .footer__container {
     margin: 0 auto;
 
     h5 {
+      color: $white;
       font-size: 16px;
       font-weight: 600;
       text-transform: uppercase;
@@ -629,6 +825,7 @@ footer {
           a {
             font-weight: 400;
             font-size: 16px;
+            color: $white;
             width: 100%;
             position: relative;
             overflow: hidden;

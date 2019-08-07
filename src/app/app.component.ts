@@ -1,14 +1,90 @@
 import { Component, Input, ViewEncapsulation, OnInit } from "@angular/core";
-
+import $ from 'jquery';
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   @Input() public movieChosen: string;
   title = "AngularProjectHTML";
+  slideMovieConfig = {
+    "slidesPerRow": 4,
+    "rows": 2,
+    "infinite": true,
+    "nextArrow": "<button class='slick-next slick-arrow'></button>",
+    "prevArrow": "<button class='slick-prev slick-arrow'></span></button>",
+    "arrows": true,
+  };
+
+  hideOtherBtn(value) {
+    value -= 1;
+    let dropdown = document.getElementsByClassName("cinema__dropdown");
+    for (let i = 0; i < dropdown.length; i++) {
+      let btn = dropdown[i].getElementsByClassName("dropdown-menu").item(0).classList;
+      if (i != value) {
+        btn.remove("show");
+      }
+      else if (i === value) {
+        if (!btn.contains("show")) {
+          btn.remove("show");
+        } else {
+          btn.add("show");
+        }
+      }
+    }
+  }
+
+  ngOnInit() {
+    for (let i = 2; i < this.dateList.length; i++) {
+      let curDate = new Date();
+
+      //"Hôm nay": T7: 6
+      let curDay: number = new Date().getDay();
+      //skip qua "Ngày mai" : CN: 0
+      if (curDay + 1 === 7) curDay = 0;
+      else curDay = curDay + 1;
+
+      switch (i) {
+        case 2:
+          curDay = curDay + 1;
+          break;
+        case 3:
+          curDay = curDay + 2;
+          break;
+        case 4:
+          curDay = curDay + 3;
+          break;
+        case 5:
+          curDay = curDay + 4;
+          break;
+      }
+      switch (curDay) {
+        case 0:
+          this.dateList[i].DOW = "Chủ Nhật";
+          break;
+        case 1:
+          this.dateList[i].DOW = "Thứ Hai";
+          break;
+        case 2:
+          this.dateList[i].DOW = "Thứ Ba";
+          break;
+        case 3:
+          this.dateList[i].DOW = "Thứ Tư";
+          break;
+        case 4:
+          this.dateList[i].DOW = "Thứ Năm";
+          break;
+        case 5:
+          this.dateList[i].DOW = "Thứ Sáu";
+          break;
+        case 6:
+          this.dateList[i].DOW = "Thứ Bảy";
+          break;
+      }
+    }
+  }
 
   ngAfterViewInit() {
     document.getElementsByClassName("main__tabset")[0].getElementsByTagName("ul")[0].classList.add("main__nav");
@@ -701,54 +777,10 @@ export class AppComponent {
   ];
   timeList = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30"];
 
+
+
   constructor() {
-    for (let i = 2; i < this.dateList.length; i++) {
-      let curDate = new Date();
 
-      //"Hôm nay": T7: 6
-      let curDay: number = new Date().getDay();
-      //skip qua "Ngày mai" : CN: 0
-      if (curDay + 1 === 7) curDay = 0;
-      else curDay = curDay + 1;
-
-      switch (i) {
-        case 2:
-          curDay = curDay + 1;
-          break;
-        case 3:
-          curDay = curDay + 2;
-          break;
-        case 4:
-          curDay = curDay + 3;
-          break;
-        case 5:
-          curDay = curDay + 4;
-          break;
-      }
-      switch (curDay) {
-        case 0:
-          this.dateList[i].DOW = "Chủ Nhật";
-          break;
-        case 1:
-          this.dateList[i].DOW = "Thứ Hai";
-          break;
-        case 2:
-          this.dateList[i].DOW = "Thứ Ba";
-          break;
-        case 3:
-          this.dateList[i].DOW = "Thứ Tư";
-          break;
-        case 4:
-          this.dateList[i].DOW = "Thứ Năm";
-          break;
-        case 5:
-          this.dateList[i].DOW = "Thứ Sáu";
-          break;
-        case 6:
-          this.dateList[i].DOW = "Thứ Bảy";
-          break;
-      }
-    }
   }
   formatDate(date) {
     let d = new Date(date);
@@ -766,12 +798,14 @@ export class AppComponent {
   }
 
   setSelected(value, check) {
+    let movieDrop = this.getEleClass("movie__dropdown");
     let cinemaDrop = this.getEleClass("cinemas__dropdown");
     let dateDrop = this.getEleClass("date__dropdown");
     let timeDrop = this.getEleClass("time__dropdown");
     let orderBtn = document.getElementById("ticket__btn").classList;
     orderBtn.remove("order__ticket");
     if (check === 1) {
+      movieDrop.remove("show");
       this.selectedMovie = value;
       this.selectedCinema = "Cụm rạp";
       this.selectedDate = "Ngày xem";
