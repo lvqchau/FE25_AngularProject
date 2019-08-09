@@ -14,53 +14,65 @@ $purple-gradient-light: linear-gradient(
 );
 
 $purple-shadow: #aa98df;
-
 //logo, navigation dot, navigation arrow, arrow-down:
 $yellow-primary: #ffd445;
-//navs, footer:
-$purple-primary: #5943ff;
 //social media icon background:
 $purple-light: #7362f4;
 //divider:
 $gray-light: #d5d5d5;
+$gray-dark: #9d9d9d;
 //white:
 $white: #fff;
 //black:
 $black: #000;
+$orangered: orangered;
+$green: #1f9350;
+
+$purple-primary: #5943ff;
+$black-text: #000;
+$bg: #fff;
+$border: $gray-light;
+$main-bg: #14181d;
+
+$purple-primary-dark: #8605ff;
+$border-dark: #778899;
+$black-text-dark: #c4daf0;
+$bg-dark: transparent;
+$main-bg-dark: $white;
 
 @font-face {
   font-family: "Grotesque";
-  src: url("assets/font/DarkerGrotesque-Bold.ttf") format("opentype");
+  src: url("../assets/font/DarkerGrotesque-Bold.ttf") format("opentype");
   font-weight: 700;
 }
 @font-face {
   font-family: "Grotesque";
-  src: url("assets/font/DarkerGrotesque-SemiBold.ttf") format("opentype");
+  src: url("../assets/font/DarkerGrotesque-SemiBold.ttf") format("opentype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Grotesque";
-  src: url("assets/font/DarkerGrotesque-Medium.ttf") format("opentype");
+  src: url("../assets/font/DarkerGrotesque-Medium.ttf") format("opentype");
   font-weight: 500;
 }
 @font-face {
   font-family: "Grotesque";
-  src: url("assets/font/DarkerGrotesque-Regular.ttf") format("opentype");
+  src: url("../assets/font/DarkerGrotesque-Regular.ttf") format("opentype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Grotesque";
-  src: url("assets/font/DarkerGrotesque-Light.ttf") format("opentype");
+  src: url("../assets/font/DarkerGrotesque-Light.ttf") format("opentype");
   font-weight: 300;
 }
 @font-face {
   font-family: "Linearicons-Free";
-  src: url("assets/font/Linearicons-Free.eot?g78a5s");
-  src: url("assets/font/Linearicons-Free.eot?g78a5s#iefix")
+  src: url("../assets/font/Linearicons-Free.eot?g78a5s");
+  src: url("../assets/font/Linearicons-Free.eot?g78a5s#iefix")
       format("embedded-opentype"),
-    url("assets/font/Linearicons-Free.ttf?g78a5s") format("truetype"),
-    url("assets/font/Linearicons-Free.woff?g78a5s") format("woff"),
-    url("assets/font/Linearicons-Free.svg?g78a5s#Linearicons-Free")
+    url("../assets/font/Linearicons-Free.ttf?g78a5s") format("truetype"),
+    url("../assets/font/Linearicons-Free.woff?g78a5s") format("woff"),
+    url("../assets/font/Linearicons-Free.svg?g78a5s#Linearicons-Free")
       format("svg");
   font-weight: normal;
   font-style: normal;
@@ -202,8 +214,8 @@ $black: #000;
 $twocolumn: 1fr 1fr;
 $threecolumn: 1fr 1fr 1fr;
 
-@mixin grid($numbersofcolumn) {
-  margin-top: 35px;
+@mixin grid($numbersofcolumn, $margin-top) {
+  margin-top: $margin-top;
   display: grid;
   grid-template-columns: $numbersofcolumn;
   grid-gap: 15px;
