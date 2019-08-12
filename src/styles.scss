@@ -523,31 +523,34 @@ p {
     }
   }
   .grid__news {
+    width: 835px;
     @include grid($twocolumn, 25px);
     .news__content {
-      @include newsStyle(300px);
+      @include newsStyle(230px);
     }
   }
   .grid__news2 {
+    width: 835px;
     @include grid($threecolumn, 35px);
     .news__content {
-      @include newsStyle(200px);
+      @include newsStyle(150px);
     }
     .more__news {
       grid-template-rows: 1fr 1fr 1fr 1fr;
       .news__items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
-          height: 60px;
-          width: 60px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          border-radius: 5px;
+          height: 50px;
+          width: 50px;
         }
         h4 {
           font-weight: 400;
           font-size: 20px;
           display: inline;
-          text-align: center;
+          padding-left: 5px;
         }
       }
     }
@@ -555,21 +558,31 @@ p {
 }
 
 //Email
+.email {
+  .media__icons {
+    width: 10px;
+    height: 10px;
+    background-image: url("/src/assets/img/fb.svg");
+  }
+}
 
 //APP
 .app {
   background-color: grey;
-  height: 500px;
   .app__container {
+    width: 835px;
     @include grid($twocolumn, 0);
     .app__info {
+      padding: 25px 0;
       color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: left;
       text-align: left;
+      font-weight: bold;
       button {
+        margin: 25px 0 10px;
         width: 250px;
         background: $purple-gradient;
         box-shadow: none;
@@ -577,11 +590,13 @@ p {
       }
     }
     .app__image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      text-align: right;
       img {
-        height: 400px;
+        height: 480px;
+        padding: 50px 0;
       }
     }
   }
