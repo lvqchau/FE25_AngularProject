@@ -224,7 +224,25 @@ $threecolumn: 1fr 1fr 1fr;
       border-radius: 7px;
     }
   }
+  .news__title {
+    width: 100%;
+    height: 50px;
+  }
+  .news__description {
+    width: 100%;
+    height: 75px;
+  }
   .news__icon {
+    .lnr {
+      padding-top: 5px;
+      font-size: 20px;
+      color: grey;
+      font-weight: 400;
+      margin: 10px;
+    }
+    span {
+      color: grey;
+    }
     img {
       height: 20px;
       margin: 15px;

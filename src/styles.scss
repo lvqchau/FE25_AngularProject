@@ -576,8 +576,10 @@ p {
     margin: 0 auto;
     @include grid($threecolumn, 35px);
     .register {
-      text-align: center;
+      text-align: left;
       padding: 40px 0;
+      display: flex;
+      align-items: center;
       p {
         font-size: 20px;
         font-weight: 600;
@@ -589,13 +591,63 @@ p {
         }
       }
     }
+
     .email__input {
       padding: 40px 0;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       input {
         width: 90%;
         border-radius: 8px;
         box-shadow: none;
+      }
+    }
+
+    .platforms {
+      text-align: right;
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        .icon__circle:hover {
+          background-color: $yellow-primary;
+        }
+      }
+      .icon__circle {
+        width: 40px;
+        height: 40px;
+        background-color: #aa98df;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 10px;
+        position: relative;
+        .lnr-facebook {
+          position: absolute;
+          color: white;
+          top: 11px;
+          left: 14px;
+        }
+        .lnr-twitter {
+          position: absolute;
+          color: white;
+          top: 11px;
+          left: 12px;
+        }
+        .lnr-google-plus {
+          position: absolute;
+          color: white;
+          top: 11px;
+          left: 10px;
+        }
+        .lnr-instagram {
+          position: absolute;
+          color: white;
+          top: 11px;
+          left: 12px;
+        }
       }
     }
   }
