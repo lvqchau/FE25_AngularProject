@@ -339,9 +339,11 @@ p {
 // Cinema Ad
 .cinema__ad {
   text-align: center;
-  padding: 50px 0;
+  height: 200px;
   margin-top: 40px;
-  background-color: black;
+  background-image: url("./assets/img/quangcao39k.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
   color: white;
   h1 {
     font-weight: 600;
@@ -533,11 +535,12 @@ p {
     width: 835px;
     @include grid($threecolumn, 35px);
     .news__content {
-      @include newsStyle(150px);
+      @include newsStyle(140px);
     }
     .more__news {
       grid-template-rows: 1fr 1fr 1fr 1fr;
       .news__items {
+        margin-bottom: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -546,11 +549,18 @@ p {
           height: 50px;
           width: 50px;
         }
-        h4 {
-          font-weight: 400;
-          font-size: 20px;
-          display: inline;
+        .text__container {
           padding-left: 5px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 200px;
+          height: 50px;
+          h4 {
+            font-weight: 400;
+            font-size: 17px;
+            display: inline;
+          }
         }
       }
     }
@@ -559,13 +569,37 @@ p {
 
 //Email
 .email {
-  .media__icons {
-    width: 10px;
-    height: 10px;
-    background-image: url("/src/assets/img/fb.svg");
+  background: $purple-gradient;
+  width: 100%;
+  .email__container {
+    width: 950px;
+    margin: 0 auto;
+    @include grid($threecolumn, 35px);
+    .register {
+      text-align: center;
+      padding: 40px 0;
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        span {
+          font-size: 20px;
+          font-weight: 600;
+          color: $yellow-primary;
+        }
+      }
+    }
+    .email__input {
+      padding: 40px 0;
+      text-align: center;
+      input {
+        width: 90%;
+        border-radius: 8px;
+        box-shadow: none;
+      }
+    }
   }
 }
-
 //APP
 .app {
   background-color: grey;
